@@ -1,0 +1,20 @@
+from tkinter import *
+from tkinter.ttk import Combobox
+from tkinter.ttk import Checkbutton
+from tkinter import messagebox
+def click():
+    res = "Привет,".format(ent.get())
+    text.configure(text=res)
+    pass
+def clicked():
+    messagebox.showinfo('Заголовок', 'Текст')
+window = Tk()
+window.title("тестирование")
+window.geometry('700x400')
+text= Label(window , text="Как тебя зовут?")
+text.grid(column=0 , row=0)
+ent= Entry(window, width=10,bg='grey', fg='black')
+ent.grid(column=1,row=0)
+but= Button(window, text="tap" , width=5, height=2, bg='pink', activebackground='yellow', command=click)
+but.grid(column=2, row=0)
+window.mainloop()
